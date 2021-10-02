@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How Dangerous JavaScript Really is</title>
+  </head>
+  <body>
+    <button onclick="v1()">Virus #1</button>
+    <button onclick="v2()">Virus #2</button>
+    <script> //This is the javascript part that makes the viruses work.
+      function v1() {
+        var i = 1;
+        while (i < 10) {
+          window.open("")
+        }
+      }
+      function v2() {
+        var i = 1;
+        while (i < 10) {
+          window.open("", "", 1000, 1000)
+        }
+      } //See how easy it is to make a javascript virus?
+      //Virus number 2 is actually pretty dangerous.
+    </script>
+  </body>
+</html>
